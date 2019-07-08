@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: hellxztest
+  cloud:
+    config:
+      uri: http://localhost:7001
+      profile: dev
+      lable: master
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 192.168.0.217
+    port: 5672
+    username: admin
+    password: admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
